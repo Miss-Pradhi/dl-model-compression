@@ -665,10 +665,5 @@ if __name__ == '__main__':
     print("  CompressionLab running!")
     print("  Open: http://127.0.0.1:5000")
     print("="*50 + "\n")
-
-    from pyngrok import ngrok
-    url = ngrok.connect(5000)
-    print(f"\n  Public URL: {url}\n")
-
-
-    app.run(debug=False, port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', debug=False, port=port)
