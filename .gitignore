@@ -1,7 +1,8 @@
+
 .venv/
 venv/
 __pycache__/
 *.pyc
 data/
-.ipynb_checkpoints/
-.vscode/
+app.py
+run_report.py
